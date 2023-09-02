@@ -1,0 +1,102 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "09/30/2022 13:29:05"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          PR1
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module PR1_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg A;
+reg B;
+reg P0;
+// wires                                               
+wire P;
+wire S;
+
+// assign statements (if any)                          
+PR1 i1 (
+// port map - connection between master ports and signals/registers   
+	.A(A),
+	.B(B),
+	.P(P),
+	.P0(P0),
+	.S(S)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// A
+initial
+begin
+	A = 1'b0;
+	A = #90000 1'b1;
+	# 10000;
+	repeat(15)
+	begin
+		A = 1'b0;
+		A = #10000 1'b1;
+		# 10000;
+	end
+	A = 1'b0;
+end 
+
+// B
+initial
+begin
+	B = 1'b0;
+	B = #110000 1'b1;
+	# 20000;
+	repeat(6)
+	begin
+		B = 1'b0;
+		B = #20000 1'b1;
+		# 20000;
+	end
+	B = 1'b0;
+	B = #20000 1'b1;
+	B = #10000 1'b0;
+end 
+
+// P0
+initial
+begin
+	P0 = 1'b0;
+	P0 = #130000 1'b1;
+	# 40000;
+	repeat(2)
+	begin
+		P0 = 1'b0;
+		P0 = #40000 1'b1;
+		# 40000;
+	end
+	P0 = 1'b0;
+	P0 = #40000 1'b1;
+	P0 = #30000 1'b0;
+end 
+endmodule
+

@@ -1,0 +1,117 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "out_fsm[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out_fsm[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out_fsm[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out_a[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out_a[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out_a[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out_a[3]",
+					"strict" : false
+				},
+				{
+					"name" : "out_b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out_b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out_b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out_b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "out_alu[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out_alu[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out_alu[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out_alu[3]",
+					"strict" : false
+				},
+				{
+					"name" : "f",
+					"strict" : false
+				},
+				{
+					"name" : "instr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "instr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "instr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "instr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "ready",
+					"strict" : false
+				},
+				{
+					"name" : "data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

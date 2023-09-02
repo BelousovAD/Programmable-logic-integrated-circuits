@@ -1,0 +1,97 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/My_works/4_year/PLIS/PR8/simulation/modelsim
+vALU
+Z1 !s110 1668221060
+!i10b 1
+!s100 Y[`;o1iHW6_9RE2[_lb<C0
+IbekL:jBoLChEY7L8JjEL=3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1666985790
+Z4 8C:/My_works/4_year/PLIS/PR8/PR8.v
+Z5 FC:/My_works/4_year/PLIS/PR8/PR8.v
+L0 1
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1668221060.000000
+Z8 !s107 C:/My_works/4_year/PLIS/PR8/PR8.v|
+Z9 !s90 -reportprogress|300|-work|work|C:/My_works/4_year/PLIS/PR8/PR8.v|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+n@a@l@u
+vPR8
+R1
+!i10b 1
+!s100 e:8>j<ELlFcJ>aK69<L8J3
+IlE52VGzDj2;7clm=]h^>n1
+R2
+R0
+R3
+R4
+R5
+L0 89
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@p@r8
+vRAM
+R1
+!i10b 1
+!s100 3FE2U6cKaahT11h;kz79n3
+IZoboVWm[[8V^UU_fl[SM92
+R2
+R0
+R3
+R4
+R5
+L0 39
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@r@a@m
+vtest
+R1
+!i10b 1
+!s100 V[V=6MXM8d:UaM77BWMGe3
+IHE?Xojjc9UoWZBQ5CD1KA0
+R2
+R0
+w1668220882
+8C:/My_works/4_year/PLIS/PR8/test.v
+FC:/My_works/4_year/PLIS/PR8/test.v
+L0 3
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/My_works/4_year/PLIS/PR8/test.v|
+!s90 -reportprogress|300|-work|work|C:/My_works/4_year/PLIS/PR8/test.v|
+!i113 1
+R10
+R11

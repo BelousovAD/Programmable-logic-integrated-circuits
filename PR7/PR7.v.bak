@@ -1,0 +1,34 @@
+// Quartus Prime Verilog Template
+// Binary counter
+
+module binary_counter
+#(parameter WIDTH=4)
+(
+	input clk, reset,
+	output reg [WIDTH-1:0] count
+);
+
+	// Reset if needed, or increment
+	always @ (posedge clk or posedge reset)
+	begin
+		if (reset)
+			count <= 0;
+		else
+			count <= count + 1;
+	end
+
+endmodule
+
+module pwm //Simple PWM
+#(parameter PWM_WIDTH=4)
+(
+input clk, reset,
+input [PWM_WIDTH-1:0] imp_width,
+output pwm_out
+);
+wire [PWM_WIDTH-1:0] cnt;
+
+binary_counter counter (.clk(clk), .reset(reset), .count(cnt));
+assign pwm_out = (imp_width > cnt) ? 1'b1 : 1'b0;
+
+endmodule

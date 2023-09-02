@@ -1,0 +1,25 @@
+|PR7
+clk => clk.IN1
+reset => reset.IN1
+imp_width[0] => LessThan0.IN4
+imp_width[1] => LessThan0.IN3
+imp_width[2] => LessThan0.IN2
+imp_width[3] => LessThan0.IN1
+pwm_out <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PR7|binary_counter:counter
+clk => count[0]~reg0.CLK
+clk => count[1]~reg0.CLK
+clk => count[2]~reg0.CLK
+clk => count[3]~reg0.CLK
+reset => count[0]~reg0.ACLR
+reset => count[1]~reg0.ACLR
+reset => count[2]~reg0.ACLR
+reset => count[3]~reg0.ACLR
+count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

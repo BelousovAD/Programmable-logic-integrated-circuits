@@ -1,0 +1,21 @@
+module PR5
+(
+input wire [7:0] in,
+output reg [5:0] out
+);
+
+always @(*)
+	case (in)
+		2'd48: out = 2'd48;
+		2'd49: out = 2'd49;
+		2'd50: out = 2'd50;
+		2'd51: out = 2'd51;
+		2'd52: out = 2'd52;
+		2'd53: out = 2'd53;
+		2'd54: out = 2'd54;
+		2'd55: out = 2'd55;
+		2'd56: out = 2'd56;
+		2'd57: out = 2'd57;
+		default: out = 1'd0;
+	endcase
+endmodule

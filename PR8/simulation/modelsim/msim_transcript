@@ -1,0 +1,111 @@
+# Reading C:/intelFPGA/18.0/modelsim_ase/tcl/vsim/pref.tcl
+# do PR8_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA/18.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/My_works/4_year/PLIS/PR8 {C:/My_works/4_year/PLIS/PR8/PR8.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:28:45 on Nov 12,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/My_works/4_year/PLIS/PR8" C:/My_works/4_year/PLIS/PR8/PR8.v 
+# -- Compiling module ALU
+# -- Compiling module RAM
+# -- Compiling module PR8
+# 
+# Top level modules:
+# 	PR8
+# End time: 09:28:46 on Nov 12,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+wave create -pattern none -portmode input -language vlog /PR8/clk
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# PR8
+wave create -pattern none -portmode input -language vlog /PR8/clr
+# PR8
+wave create -pattern none -portmode input -language vlog /PR8/wr_re
+# PR8
+wave create -pattern none -portmode input -language vlog -range 3 0 /PR8/instr
+# PR8
+wave create -pattern none -portmode input -language vlog -range 3 0 /PR8/addr_a
+# PR8
+wave create -pattern none -portmode input -language vlog -range 3 0 /PR8/addr_b
+# PR8
+wave modify -driver freeze -pattern counter -startvalue 0000 -endvalue 1111 -type Range -direction Up -period 50ns -step 1 -repeat forever -range 3 0 -starttime 0ns -endtime 5000ns NewSig:/PR8/instr
+# PR8
+wave modify -driver freeze -pattern counter -startvalue 0000 -endvalue 1111 -type Range -direction Up -period 50ns -step 1 -repeat 1000 -range 3 0 -starttime 0ns -endtime 1000ns NewSig:/PR8/instr
+# PR8
+wave modify -driver freeze -pattern counter -startvalue 0000 -endvalue 1111 -type Range -direction Up -period 50ns -step 1 -repeat forever -range 3 0 -starttime 0ns -endtime 5000ns NewSig:/PR8/addr_a
+# PR8
+wave modify -driver freeze -pattern counter -startvalue 0000 -endvalue 1111 -type Range -direction Up -period 50ns -step 1 -repeat forever -range 3 0 -starttime 0ns -endtime 5000ns NewSig:/PR8/addr_b
+# PR8
+wave modify -driver freeze -pattern clock -initialvalue 0 -period 50ns -dutycycle 50 -starttime 0ns -endtime 5000ns NewSig:/PR8/clk
+# PR8
+wave modify -driver freeze -pattern constant -value 1 -starttime 0ns -endtime 5000ns NewSig:/PR8/clr
+# PR8
+wave edit insert_pulse -duration 10ns -time 0ns NewSig:/PR8/clr
+wave edit insert_pulse -duration 60ns -time 0ns NewSig:/PR8/clr
+wave modify -driver freeze -pattern constant -value 1 -starttime 0ns -endtime 5000ns NewSig:/PR8/wr_re
+# PR8
+wave edit insert_pulse -duration 2500ns -time 0ns NewSig:/PR8/wr_re
+wave export -file C:/My_works/4_year/PLIS/PR8/simulation/modelsim/test -starttime 0 -endtime 5000 -format vlog -designunit PR8
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+vlog -reportprogress 300 -work work C:/My_works/4_year/PLIS/PR8/PR8.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:44:20 on Nov 12,2022
+# vlog -reportprogress 300 -work work C:/My_works/4_year/PLIS/PR8/PR8.v 
+# -- Compiling module ALU
+# -- Compiling module RAM
+# -- Compiling module PR8
+# 
+# Top level modules:
+# 	PR8
+# End time: 09:44:20 on Nov 12,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/My_works/4_year/PLIS/PR8/test.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:44:20 on Nov 12,2022
+# vlog -reportprogress 300 -work work C:/My_works/4_year/PLIS/PR8/test.v 
+# -- Compiling module test
+# 
+# Top level modules:
+# 	test
+# End time: 09:44:20 on Nov 12,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -gui -l msim_transcript work.test
+# vsim -gui -l msim_transcript work.test 
+# Start time: 09:45:48 on Nov 12,2022
+# Loading work.test
+# Loading work.PR8
+# Loading work.ALU
+# Loading work.RAM
+add wave  \
+sim:/test/addr_b \
+sim:/test/instr \
+sim:/test/clr \
+sim:/test/clk \
+sim:/test/addr_a \
+sim:/test/wr_re
+run -all
+# ** Note: $stop    : C:/My_works/4_year/PLIS/PR8/test.v(235)
+#    Time: 10 us  Iteration: 0  Instance: /test
+# Break in Module test at C:/My_works/4_year/PLIS/PR8/test.v line 235
+add wave  \
+sim:/test/VARinstr \
+sim:/test/VARaddr_a \
+sim:/test/VARaddr_b
+run
+# End time: 09:52:42 on Nov 12,2022, Elapsed time: 0:06:54
+# Errors: 0, Warnings: 0

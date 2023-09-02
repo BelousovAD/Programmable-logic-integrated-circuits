@@ -1,0 +1,4 @@
+Running testbench
+Test control: Failed (on value 1)
+Test reset: Passed
+Stop testbench

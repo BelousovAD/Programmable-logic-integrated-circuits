@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, C:/My_works/4_year/PLIS/PR1/PR1.bdf
+source_file = 1, C:/My_works/4_year/PLIS/PR1/Waveform.vwf
+source_file = 1, C:/My_works/4_year/PLIS/PR1/db/PR1.cbx.xml
+design_name = PR1
+instance = comp, \P~output , P~output, PR1, 1
+instance = comp, \S~output , S~output, PR1, 1
+instance = comp, \P0~input , P0~input, PR1, 1
+instance = comp, \A~input , A~input, PR1, 1
+instance = comp, \B~input , B~input, PR1, 1
+instance = comp, \inst8~0 , inst8~0, PR1, 1
+instance = comp, \inst9~0 , inst9~0, PR1, 1

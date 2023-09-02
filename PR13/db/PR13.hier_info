@@ -1,0 +1,32 @@
+|PR13
+clk => sr_out~reg0.CLK
+clk => sr[0].CLK
+clk => sr[1].CLK
+clk => sr[2].CLK
+clk => sr[3].CLK
+clk => sr[4].CLK
+clk => sr[5].CLK
+clk => sr[6].CLK
+clk => sr[7].CLK
+control => sr_out~reg0.ENA
+control => sr[7].ENA
+control => sr[6].ENA
+control => sr[5].ENA
+control => sr[4].ENA
+control => sr[3].ENA
+control => sr[2].ENA
+control => sr[1].ENA
+control => sr[0].ENA
+reset => sr_out~reg0.ACLR
+reset => sr[0].ACLR
+reset => sr[1].ACLR
+reset => sr[2].ACLR
+reset => sr[3].ACLR
+reset => sr[4].ACLR
+reset => sr[5].ACLR
+reset => sr[6].ACLR
+reset => sr[7].ACLR
+sr_in => sr[0].DATAIN
+sr_out <= sr_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

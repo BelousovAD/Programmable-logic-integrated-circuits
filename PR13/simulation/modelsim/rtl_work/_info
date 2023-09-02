@@ -1,0 +1,53 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/My_works/4_year/PLIS/PR13/simulation/modelsim
+vPR13
+Z1 !s110 1671194086
+!i10b 1
+!s100 dF9LD`Dc]?fSR`CBUX=W33
+I7YBn_Y8aU<5=GHIRiShXb3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1671194055
+8C:/My_works/4_year/PLIS/PR13/PR13.v
+FC:/My_works/4_year/PLIS/PR13/PR13.v
+L0 22
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1671194086.000000
+!s107 C:/My_works/4_year/PLIS/PR13/PR13.v|
+!s90 -reportprogress|300|-work|work|C:/My_works/4_year/PLIS/PR13/PR13.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@p@r13
+vtb1
+R1
+!i10b 1
+!s100 IgVNA2T>L0Q_n[@aeSzo^0
+IgCkKF^]d5c2:I=H=MP?_f0
+R2
+R0
+w1671185792
+8C:/My_works/4_year/PLIS/PR13/tb1.v
+FC:/My_works/4_year/PLIS/PR13/tb1.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/My_works/4_year/PLIS/PR13/tb1.v|
+!s90 -reportprogress|300|-work|work|C:/My_works/4_year/PLIS/PR13/tb1.v|
+!i113 1
+R5
+R6

@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/My_works/4_year/PLIS/PR7/simulation/qsim
+vPR7
+Z1 !s110 1665944165
+!i10b 1
+!s100 5njYe3c<c1BcOjM8BYJ041
+I]@6KneaWzRRoa52URgM<W1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1665944164
+8PR7.vo
+FPR7.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1665944164.000000
+!s107 PR7.vo|
+!s90 -work|work|PR7.vo|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@p@r7
+vPR7_vlg_vec_tst
+R1
+!i10b 1
+!s100 GTc0cZ]:k^n8]P27KZ8JB0
+I;Y<C0=KJVmYzT`LBCNSV90
+R2
+R0
+w1665944162
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+!s108 1665944165.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R4
+R5
+n@p@r7_vlg_vec_tst

@@ -1,0 +1,98 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/My_works/4_year/PLIS/PR9/simulation/qsim
+vFSM_Mealy
+Z1 !s110 1668416655
+!i10b 1
+!s100 GY0QUR1Jaoh5i9mEiD;391
+IIbjkGmmi1[PBcX@66?mBA1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1668416654
+Z3 8PR9.vo
+Z4 FPR9.vo
+Z5 L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1668416655.000000
+Z8 !s107 PR9.vo|
+Z9 !s90 -work|work|PR9.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+n@f@s@m_@mealy
+vFSM_Mealy_vlg_vec_tst
+R1
+!i10b 1
+!s100 9Zo@5Qcg4=J7kXWCDT4IL0
+INCgdD3[7C6C2GkAdI3h712
+R2
+R0
+w1668416653
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+Z12 L0 29
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11
+n@f@s@m_@mealy_vlg_vec_tst
+vFSM_Moore
+Z13 !s110 1668417953
+!i10b 1
+!s100 4g4Xm_F3BN7>inEE1>n@S2
+IJD9FKhi;Ue;776d2ieEX20
+R2
+R0
+w1668417952
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z14 !s108 1668417953.000000
+R8
+R9
+!i113 1
+R10
+R11
+n@f@s@m_@moore
+vFSM_Moore_vlg_vec_tst
+R13
+!i10b 1
+!s100 lVAbeI7nkc96_nSl>jE]f0
+IAhPieQD:9PX1[S?2G[]Sm0
+R2
+R0
+w1668417951
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+R14
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R10
+R11
+n@f@s@m_@moore_vlg_vec_tst

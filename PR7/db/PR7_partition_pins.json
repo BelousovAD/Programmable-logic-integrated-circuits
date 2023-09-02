@@ -1,0 +1,37 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "pwm_out",
+					"strict" : false
+				},
+				{
+					"name" : "imp_width[3]",
+					"strict" : false
+				},
+				{
+					"name" : "imp_width[2]",
+					"strict" : false
+				},
+				{
+					"name" : "imp_width[1]",
+					"strict" : false
+				},
+				{
+					"name" : "imp_width[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

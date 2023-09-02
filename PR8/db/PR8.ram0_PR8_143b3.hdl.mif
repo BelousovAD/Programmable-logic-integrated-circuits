@@ -1,0 +1,27 @@
+-- begin_signature
+-- PR8
+-- end_signature
+WIDTH=4;
+DEPTH=16;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	15 :	XXXX;
+	14 :	XXXX;
+	13 :	XXXX;
+	12 :	XXXX;
+	11 :	XXXX;
+	10 :	XXXX;
+	9 :	XXXX;
+	8 :	XXXX;
+	7 :	XXXX;
+	6 :	XXXX;
+	5 :	XXXX;
+	4 :	XXXX;
+	3 :	XXXX;
+	2 :	XXXX;
+	1 :	XXXX;
+	0 :	0000;
+END;

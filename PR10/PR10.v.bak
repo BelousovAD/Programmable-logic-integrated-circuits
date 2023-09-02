@@ -1,0 +1,171 @@
+module ALU
+#(parameter DATA_WIDTH = 4, COMAND_WIDTH = 4)
+(
+   output reg [(DATA_WIDTH-1):0] c,
+	output reg flag,
+	input [(COMAND_WIDTH-1):0] instr,
+	input [(DATA_WIDTH-1):0] a, b
+);
+parameter
+NOP = 	4'b0000,
+NOT = 	4'b0001,
+LSHIFT = 4'b0010,
+RSHIFT = 4'b0011,
+RCSHIFT = 4'b0100, /* новая операция циклический сдвиг через знак переноса */
+LAND = 	4'b1001,
+LOR = 	4'b1010,
+ADD = 	4'b1011,
+SUB = 	4'b1100,
+XOR = 	4'B1101; /* новая операция поразрядный xor */
+
+always @ (*)
+begin
+	case (instr)
+		NOP: {flag,c} = 0; 				
+		NOT: {flag, c} = {1'b0, ~a}; 		
+		LSHIFT: {flag, c} = {a, 1'b0};		
+		RSHIFT: {c, flag} = {1'b0, a};		
+		LAND: {flag, c} = {1'b0, a & b}; 
+		LOR: {flag, c} = {1'b0, a | b};
+		ADD: {flag, c} = a+b; 
+		SUB: {flag, c} = a-b; 
+		RCSHIFT: {c, flag} = {flag, a};
+		XOR: {flag, c} = {1'b0, a ^ b};
+		default: {flag, c} = {DATA_WIDTH+1{1'b0}}; 
+   endcase	
+end
+endmodule
+
+module FSM_Moore (
+input clk, reset, input [1:0]in, 
+output reg [2:0] out, 
+output wire [1:0] w_state);//отладочный порт
+
+	parameter A0=2'b00, A1=2'b01, A2=2'b10, A3=2'b11;
+	parameter S0=2'b00, S1=2'b01, S2=2'b10, S3=2'b11;
+	parameter Y0=3'b001, Y1=3'b010, Y2=3'b100;
+	reg [1:0] state;
+	assign w_state = state;//для отладки
+
+	always @ (state)
+	begin
+			case (state) 
+				S0: out = Y2;
+				S1: out = Y1;
+				S2: out = Y0;
+				S3: out = Y2;
+				default: out = 3'b000;
+			endcase
+	end
+	
+	always @ (posedge clk or negedge reset) begin // переходы
+	if (!reset)
+		state <= S0;
+	else
+		case (state) 
+			S0: begin
+						case (in)
+							A0: state <= S3;
+							A1: state <= S0;
+							A2: state <= S0;
+							A3: state <= S1;
+							default: state <= S0;
+						endcase
+					end
+			S1: begin
+						case (in)
+							A0: state <= S3;
+							A1: state <= S0;
+							A2: state <= S0;
+							A3: state <= S2;
+							default: state <= S0;
+						endcase
+					end
+			S2: begin
+						case (in)
+							A0: state <= S0;
+							A1: state <= S1;
+							A2: state <= S1;
+							A3: state <= S2;
+							default: state <= S0;
+						endcase
+					end
+			S3: begin
+						case (in)
+							A0: state <= S2;
+							A1: state <= S2;
+							A2: state <= S2;
+							A3: state <= S1;
+							default: state <= S0;
+						endcase
+					end
+		endcase
+	end
+endmodule
+
+module RAM
+#(parameter DATA_WIDTH = 4, ADDR_WIDTH = 4)
+(
+	input clk, wr_re, clr,
+	input [(DATA_WIDTH-1):0] d,
+	input [(ADDR_WIDTH-1):0] addr_a, addr_b,
+	output reg [(DATA_WIDTH-1):0] q_a, q_b
+);
+
+
+reg [(DATA_WIDTH-1):0] ram [2**ADDR_WIDTH-1:0];
+
+initial
+begin
+	ram[4'b0000] = 4'b0001;
+	ram[4'b0001] = 4'b0010;
+	ram[4'b0010] = 4'b0011;
+	ram[4'b0011] = 4'b0100;
+	ram[4'b0100] = 4'b0101;
+	ram[4'b0101] = 4'b0110;
+	ram[4'b0110] = 4'b0111;
+	ram[4'b0111] = 4'b1000;
+	ram[4'b1000] = 4'b1001;
+	ram[4'b1001] = 4'b1010;
+	ram[4'b1010] = 4'b1011;
+	ram[4'b1011] = 4'b1100;
+	ram[4'b1100] = 4'b1101;
+	ram[4'b1101] = 4'b1110;
+	ram[4'b1110] = 4'b1111;
+	ram[4'b1111] = 4'b0000;
+end
+
+always @(posedge clk or negedge clr)
+begin
+	if(~clr)
+	begin
+		q_a <= {DATA_WIDTH{1'b0}};
+		q_b <= {DATA_WIDTH{1'b0}};
+	end
+	else
+		if (wr_re)
+			ram [addr_a] <= d;
+		else
+		begin
+			q_a <= ram [addr_a];
+			q_b <= ram [addr_b];
+		end
+end
+endmodule
+
+module PR10
+#(parameter DATA_WIDTH=4, ADDR_WIDTH=4, COMAND_WIDTH=4)
+(
+input clk, clr, wr_re,
+input [(COMAND_WIDTH-1):0] instr,
+input [(ADDR_WIDTH-1):0] addr_a, addr_b,
+//шины для отладки
+output [(DATA_WIDTH-1):0] a, b, c,
+output f
+);
+//wire [(DATA_WIDTH-1):0] a, b, c;
+ALU #(.DATA_WIDTH(DATA_WIDTH), .COMAND_WIDTH(COMAND_WIDTH)) alu
+	(.c(c), .flag(f), .instr(instr), .a(a), .b(b));
+RAM #(.DATA_WIDTH(DATA_WIDTH), .ADDR_WIDTH(ADDR_WIDTH)) ram
+	(.clk(clk), .wr_re(wr_re), .clr(clr), .d(c), .addr_a(addr_a), .addr_b(addr_b), .q_a(a), .q_b(b));
+endmodule
